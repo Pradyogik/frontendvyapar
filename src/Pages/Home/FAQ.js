@@ -1,4 +1,6 @@
-import React , {useState} from 'react'
+import React , {useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 function FAQ() {
 
@@ -15,16 +17,17 @@ function FAQ() {
         <h1 className="font-weight-bold text-center text-white pt-5">FAQ's</h1>
       </div>
 
-      <div className='d-flex faqDflex'>
-        <div className='container faqContainer'>
+      <div className=' faqDflex container'>
+        
           <div className="faqWrapper py-5 d-block">
             <div id="accordion" className="accordion">
               <div className="card faqCard">
                 <div
-                  className="card-header collapsed"
+                  className="card-header collapsed d-flex justify-content-between"
                   onClick={() => handleToggle('collapseOne')}
                 >
-                  <a className="card-title faqTitle">What services do you offer?</a>
+                  <a className="card-title faqTitle">What services do you offer? </a>
+                  <FontAwesomeIcon className='ml-auto' icon={faAngleDown} />
                 </div>
                 <div
                   id="collapseOne"
@@ -36,10 +39,11 @@ function FAQ() {
                 </div>
 
                 <div
-                  className="card-header bg-white collapsed"
+                  className="card-header d-flex justify-content-between bg-white collapsed"
                   onClick={() => handleToggle('collapseFour')}
                 >
                   <a className="card-title faqTitle">How do you support clients?</a>
+                  <FontAwesomeIcon  icon={faAngleDown} />
                 </div>
                 <div
                   id="collapseFour"
@@ -49,10 +53,11 @@ function FAQ() {
                 </div>
 
                 <div
-                  className="card-header bg-white collapsed"
+                  className="card-header d-flex justify-content-between bg-white collapsed"
                   onClick={() => handleToggle('collapseFive')}
                 >
                   <a className="card-title faqTitle">How can I contact you?</a>
+                  <FontAwesomeIcon  icon={faAngleDown} />
                 </div>
                 <div
                   id="collapseFive"
@@ -63,14 +68,15 @@ function FAQ() {
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="container faqWrapper py-5 d-block">
+
+        <div className=" faqWrapper py-5 d-block">
           <div
-            className="card-header bg-white collapsed"
+            className="card-header d-flex justify-content-between bg-white collapsed"
             onClick={() => handleToggle('collapseTwo')}
           >
             <a className="card-title faqTitle">How can I contact you?</a>
+            <FontAwesomeIcon  icon={faAngleDown} />
           </div>
           <div
             id="collapseTwo"
@@ -80,10 +86,11 @@ function FAQ() {
           </div>
 
           <div
-            className="card-header bg-white collapsed"
+            className="card-header d-flex justify-content-between bg-white collapsed"
             onClick={() => handleToggle('collapseThree')}
           >
             <a className="card-title faqTitle">How do you support clients?</a>
+            <FontAwesomeIcon icon={faAngleDown} />
           </div>
           <div
             id="collapseThree"

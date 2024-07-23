@@ -1,5 +1,7 @@
 import React from 'react';
-import './Footer.css'
+import './Footer.css';
+import GPLogo from '../../Assets/Google Play Badge.png';
+import ApLogo from '../../Assets/App Store Badge.png';
 
  function Footer() {
   return (<>
@@ -24,8 +26,8 @@ import './Footer.css'
                 </div>
                 <div class="col-md-6  downloadContainer">
                     <h5>Download</h5>
-                    <a href="#"><img src="https://via.placeholder.com/150x50.png?text=App+Store" alt="Download on the App Store"/></a>
-                    <a href="#"><img src="https://via.placeholder.com/150x50.png?text=Google+Play" alt="Get it on Google Play"/></a>
+                    <a href="#"><img src={ApLogo} alt="Download on the App Store"/></a>
+                    <a href="#"><img src={GPLogo} alt="Get it on Google Play"/></a>
                 </div>
             </div>
         </div>

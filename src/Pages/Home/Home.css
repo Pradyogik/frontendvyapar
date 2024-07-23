@@ -699,6 +699,14 @@ letter-spacing: 1px;
     font-family: "Roboto", sans-serif;
 
 }
+.faqDflex{
+    display: flex;
+    gap: 1rem;
+}
+.faqWrapper{
+    width: 50%;
+
+}
 .faqCard{
     background-color: white;
     margin-bottom: 1rem !important;
@@ -711,5 +719,4 @@ letter-spacing: 1px;
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
-  }
-  
+}

@@ -4,14 +4,27 @@ import { NavLink, useLocation } from "react-router-dom";
 
 function Header() {
   const [active, setActive] = useState("");
+  const [blurNavbar , setBlurNavbar] = useState(false)
   const location = useLocation();
 
   useEffect(() => {
     setActive(location.pathname);
   }, [location]);
 
+  const handleBlurHeader = ()=>{
+    if(window.scrollY >= 100){
+      setBlurNavbar(true)
+      console.log(window.scrollY);
+    }
+    else{
+      setBlurNavbar(false)
+    }
+  }
+
+  window.addEventListener('scroll' , handleBlurHeader)
+
   return (
-    <div className="headerContainer container-fluid p-0 sticky-top">
+    <div className={`headerContainer container-fluid p-0 sticky-top ${blurNavbar ? 'blurHeader' : ''} `}>
       <nav className="navbar navbar-expand-lg headerNavbar navbar-light">
         <a className="navbar-brand ml-5 p-0 mr-0" href="#">
          <p>Vya<span>par</span> Launch<span>pad</span></p> 
