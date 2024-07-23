@@ -685,6 +685,20 @@ letter-spacing: 1px;
     background-repeat: no-repeat;
     background-size: cover;
 }
+.faqSection > div > h1{
+    font-family: "Roboto", sans-serif;
+}
+.accordion{
+    font-family: 'Ubuntu' , sans-serif;   
+}
+.faqTitle{
+    color: black;
+}
+.faqCardBody{
+    color: #AFAFAF;
+    font-family: "Roboto", sans-serif;
+
+}
 .faqCard{
     background-color: white;
     margin-bottom: 1rem !important;
